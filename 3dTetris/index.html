@@ -99,6 +99,8 @@
       Movement: arrows <br>
       Rotation: AD/SW/QE <br>
       Press spacebar to bring tetrimino down instantaneously. <br>
+      Press P to toggle between pause and resume. <br>
+      Mouse controls for camera: left: rotate, right: pan, scroll: zoom. <br>
     </p>
     <p id="points">
 		Score: 0
@@ -467,6 +469,7 @@
 					if ( clearPlaneFlag )
 					{
 						score += 100 * levelSpeed;
+						document.getElementById("points").innterHTML = "Score: " + score;
 						tetris++;
 						for ( i = 0; i < staticCubes.length; ++i )
 						{	
@@ -492,10 +495,16 @@
 				}
 				
 				if ( tetris == 2 )
+				{	
 					score += 400 * levelSpeed;
+					document.getElementById("points").innterHTML = "Score: " + score;
+				}
 				
 				if ( tetris == 4 )
+				{
 					score += 800 * levelSpeed;
+					document.getElementById("points").innterHTML = "Score: " + score;
+				}
 				
 				tetris = 0;
 				document.getElementById("points").innterHTML = "Score: " + score;
