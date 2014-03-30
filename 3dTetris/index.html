@@ -140,7 +140,6 @@
 	<div id = "nextpiece">
 	<p>Next Piece</p>
 	<div id="piece">
-	<img id="pieceimage" alt="Next Piece" />
 	</div>
 	</div>
 	
@@ -318,7 +317,7 @@
 					break;
 			}
 			
-			document.getElementById("pieceimage").src = "tetris/" + ( pieceType + 1 ) + ".png";
+			document.getElementById("piece").innerHTML = "<img id='pieceimage' src = 'tetris/" + ( pieceType + 1 ) + ".png' alt='Next Piece' />";
 			
 			flag = true;
 			cloneFlag = true;
