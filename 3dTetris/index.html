@@ -543,6 +543,9 @@
 			
 			var i, flag = true, index = [], order = 1;
 			
+			if (( gameOver )||(( gamePaused )&&( event.keyCode != 80 )))
+				return;
+			
 			if ( Math.abs( camera.position.z ) > Math.abs( camera.position.x ))
 			{
 				if ( camera.position.z > 0 )
