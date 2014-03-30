@@ -214,8 +214,7 @@
 			addLights();
 			helperArrows();
 			
-			if (( !gameOver )&&( !gamePaused ))
-				window.addEventListener( 'keydown', onKeyDown, false );
+			window.addEventListener( 'keydown', onKeyDown, false );
 			
 		}
 
@@ -403,6 +402,8 @@
 			
 			levelSpeed = (( document.getElementById("level").value === "" )||( document.getElementById("level").value < 2 )) ? 2 : ( document.getElementById("level").value < 51 ) ? document.getElementById("level").value : 50;
 			document.getElementById("Level").innerHTML = "Level: " + levelSpeed;
+			
+			document.getElementById("points").innerHTML = "Score: " + score;
 
 			if ( cloneFlag )
 			{
@@ -533,7 +534,6 @@
 				nextCubeGroup.rotation.y -= 0.005;
 			//	nextCubeGroup.rotation.x -= 0.005;
 			}
-			document.getElementById("points").innterHTML = "Score: " + score;
 			render();
 		}
 
