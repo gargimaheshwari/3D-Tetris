@@ -140,7 +140,7 @@
 		var staticCubes = [];
 		
 		var score = 0, tetris = 0, gameOver = false, gamePaused = false;
-		
+		var isPaused = 0;
 		var r;
 
 		var iteration = 0;
@@ -557,6 +557,19 @@
 			
 			switch ( event.keyCode )
 			{
+				case 80:
+					if ( isPaused == 0 )
+					{
+						gamePaused = true;
+						isPaused = 1;
+					}
+					else if ( isPaused == 1 )
+					{
+						gamePaused = false;
+						isPaused = 0;
+						resumeFunction();
+					}
+					break;
 				case 32:
 					cubeGroup.position.y = positionY;
 					break;
