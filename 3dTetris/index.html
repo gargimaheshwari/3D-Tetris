@@ -231,7 +231,7 @@
 				cubeGroup.add( groupCubes[i] );
 				nextCubeGroup.remove( groupCubes[i] );
 			}
-			cubeGroup.position.set( 0, 400, 0 );
+			cubeGroup.position.set( 0, 300, 0 );
 			scene.add( cubeGroup );
 			cubes.length = 0;
 			}
@@ -399,7 +399,7 @@
 
 			var i, j, k, l, m;
 			
-			levelSpeed = (( document.getElementById("level").value === "" )||( document.getElementById("level").value < 2 )) ? 5 : ( document.getElementById("level").value < 51 ) ? document.getElementById("level").value : 50;
+			levelSpeed = (( document.getElementById("level").value === "" )||( document.getElementById("level").value < 2 )) ? 2 : ( document.getElementById("level").value < 51 ) ? document.getElementById("level").value : 50;
 			document.getElementById("Level").innerHTML = "Level: " + levelSpeed;
 
 			if ( cloneFlag )
@@ -826,7 +826,7 @@
 			
 			cloneGroup.position.y  = tempPositionY; 
 			positionY = cloneGroup.position.y;
-			if ( positionY > 360 )
+			if ( positionY > 250 )
 				gameOver = true;
 		}
 
