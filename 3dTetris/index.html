@@ -165,7 +165,7 @@
 		}
 		var positionY = 0;
 
-		var levelSpeed = 2;
+		var levelSpeed = 5;
 
 		init();
 		animate();
@@ -398,7 +398,7 @@
 
 			var i, j, k, l, m;
 			
-			levelSpeed = (( document.getElementById("level").value === "" )||( document.getElementById("level").value < 2 )) ? 2 : ( document.getElementById("level").value < 51 ) ? document.getElementById("level").value : 50;
+			levelSpeed = (( document.getElementById("level").value === "" )||( document.getElementById("level").value < 2 )) ? 5 : ( document.getElementById("level").value < 51 ) ? document.getElementById("level").value : 50;
 			document.getElementById("Level").innerHTML = "Level: " + levelSpeed;
 
 			if ( cloneFlag )
