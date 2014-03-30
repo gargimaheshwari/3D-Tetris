@@ -10,12 +10,12 @@
 			position: absolute;
 			font-family: georgia;
 			top: 70px;
-			font-size: 19px;
+			font-size: 17px;
 			left: 25px;
 			width: 300px;
 			color: #fdfdfd;
 			text-align: center;
-			padding: 1px 15px 15px 15px;
+			padding: 1px 15px 20px 15px;
 			background-color: #776e65;
 			opacity: 0.95;
 			filter:alpha(opacity=95);
@@ -98,9 +98,9 @@
     <p>
       Movement: arrows <br>
       Rotation: AD/SW/QE <br>
-      Press spacebar to bring tetrimino down instantaneously. <br>
-      Press P to toggle between pause and resume. <br>
-      Mouse controls for camera: left: rotate, right: pan, scroll: zoom. <br>
+      Press spacebar to bring tetrimino down instantaneously. <br><br>
+      Press P to toggle between pause and resume. <br><br>
+      Mouse controls for camera:<br> left: rotate, right: pan, scroll: zoom. <br>
     </p>
     <p id="points">
 		Score: 0
@@ -483,6 +483,7 @@
 							{
 								for ( m = q; m < freeSpaces[i][j].length; ++m )
 									freeSpaces[i][j][m] = freeSpaces[i][j][m+1];
+								freeSpaces[i][j].length--;
 							}
 						}
 						
@@ -491,6 +492,7 @@
 							if ( staticCubes[i].position.y > ( q * 20 )) 
 								staticCubes[i].position.y -= 20;
 						}
+						manageClonePosition();
 					} 
 				}
 				
